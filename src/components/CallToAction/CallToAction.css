@@ -1,0 +1,38 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5%;
+  background-color: #495E57;
+}
+
+.hero-text {
+  max-width: 500px;
+  color: white;
+}
+
+.hero-text h1 {
+  color: #F4CE14;
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.hero-text button {
+  background-color: #F4CE14;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.hero img {
+  width: 300px;
+  border-radius: 16px;
+  transform: translateY(20%);
+}
