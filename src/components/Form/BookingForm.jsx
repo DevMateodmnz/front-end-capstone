@@ -62,4 +62,40 @@ export default function BookingForm({ availableTimes, dispatch }) {
       <input type="submit" value="Make Your reservation" />
     </form>
   );
+  import React, { useState } from 'react';
+import '../../styles/BookingForm.css';
+
+export default function BookingForm({ availableTimes, dispatch, submitForm }) {
+  // Add validation states and logic here
+  const [errors, setErrors] = useState({});
+  
+  // Add validation functions
+  const validateField = (name, value) => {
+    // Validation logic
+  };
+
+  return (
+    <form aria-label="Reservation form">
+      {/* Add HTML5 validation attributes */}
+      <input 
+        type="date" 
+        required
+        min={new Date().toISOString().split('T')[0]}
+      />
+      
+      {/* Add ARIA attributes */}
+      <label htmlFor="guests">Guests</label>
+      <input 
+        id="guests"
+        aria-invalid={!!errors.guests}
+        aria-describedby="guestError"
+      />
+      
+      {/* Validation messages */}
+      {errors.guests && (
+        <span id="guestError" role="alert">{errors.guests}</span>
+      )}
+    </form>
+  );
+}
 }
